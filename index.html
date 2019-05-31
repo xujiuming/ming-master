@@ -1,50 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="zh">
 <head>
     <title>ming</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/vue.2.6.10.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navbar-app">
-    <a class="navbar-brand" href="#">ming</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="https://xujiuming.com">ming</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item" v-for="item in titleLinks">
-                <a class="nav-link" v-bind:href="{{item.linkUrl}}">{{item.name}}</a>
-            </li>
-        </ul>
-    </div>
 </nav>
 
 <div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <button type="button" class="btn btn-primary btn-block" onclick="window.open('https://blog.xujiuming.com')">
+                博客
+            </button>
+        </div>
 
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <button type="button" class="btn btn-primary btn-block"
+                    onclick="window.open('https://github.com/xuxianyu')">github
+            </button>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <button type="button" class="btn btn-primary btn-block" onclick="window.open('https://www.json.cn/')">
+                json格式化工具
+            </button>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <button type="button" class="btn btn-primary btn-block"
+                    onclick="window.open('https://www.sojson.com/encrypt_md5.html')">md5加密工具
+            </button>
+        </div>
+    </div>
 </div>
 
-<div class="jumbotron text-center " style="margin-bottom:0">
+<div class="jumbotron text-center" style="margin-bottom:0">
     <p>ming@主站首页</p>
 </div>
-<script>
-    let navbarApp = new Vue({
-        el: '#navbar-app',
-        data: {
-            title: 'ming',
-            titleLinks: [
-                {linkUrl: 'https://blog.xujiuming.com', name: '博客'},
-                {linkUrl: 'https://github.com/xuxianyu', name: 'github'}
-            ],
-        }
-    });
 
-</script>
 </body>
 </html>
