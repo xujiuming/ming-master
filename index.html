@@ -8,6 +8,20 @@
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
+    <style>
+        .navSection {
+            display: flex;
+            /*justify-content: center;*/
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 31%;
+            margin: 1%;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -17,35 +31,33 @@
     </button>
 </nav>
 
-<div class="container" style="margin-top:30px">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <button type="button" class="btn btn-primary btn-block" onclick="window.open('https://blog.xujiuming.com')">
-                博客
-            </button>
+<div class="container">
+    <div class="navSection">
+        <div class="item font-weight-bold text-center">
+            <div class="card bg-dark text-white">
+                <div class="card-body" onclick="window.open('https://blog.xujiuming.com')">博客</div>
+            </div>
         </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <button type="button" class="btn btn-primary btn-block"
-                    onclick="window.open('https://github.com/xuxianyu')">github
-            </button>
+        <div class="item font-weight-bold text-center">
+            <div class="card bg-dark text-white ">
+                <div class="card-body" onclick="window.open('https://github.com/xuxianyu')">Github</div>
+            </div>
         </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <button type="button" class="btn btn-primary btn-block" onclick="window.open('https://www.json.cn/')">
-                json格式化工具
-            </button>
+        <div class="item font-weight-bold text-center">
+            <div class="card bg-dark text-white ">
+                <div class="card-body" onclick="window.open('https://www.json.cn/')">JSON格式化工具</div>
+            </div>
         </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <button type="button" class="btn btn-primary btn-block"
-                    onclick="window.open('https://www.sojson.com/encrypt_md5.html')">md5加密工具
-            </button>
+        <div class="item font-weight-bold text-center">
+            <div class="card bg-dark text-white ">
+                <div class="card-body" onclick="window.open('http://www.ofmonkey.com/')">常用开发在线工具</div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+
+<div class="jumbotron text-center fixed-bottom " style="margin-bottom:0">
     <p>ming@主站首页</p>
 </div>
 
