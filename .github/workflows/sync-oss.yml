@@ -1,9 +1,7 @@
 # 参考: https://www.jianshu.com/p/99952652b2dd
-
 name: sync-oss
 # 初期监听push事件  后续按情况调整
 on: [push]
-
 
 jobs:
   build:
@@ -13,6 +11,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+      - name: 开始部署ming-master
+        run: |
+            curl --version
+            echo ${{ secrets.OSS_ACCESS_KEY_ID }}
       - name: 构建vuepress静态文件
         run: |
           npm install
@@ -26,3 +28,7 @@ jobs:
           access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
       - name: 同步dist文件到oss上
         run: ossutil cp docs/.vuepress/dist/ oss://ming-master/ -rf
+      - name: 部署ming-master完成
+          run: |
+            curl --version
+            echo ${{ secrets.OSS_ACCESS_KEY_ID }}
