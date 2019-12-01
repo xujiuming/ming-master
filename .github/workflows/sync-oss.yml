@@ -29,6 +29,6 @@ jobs:
       - name: 同步dist文件到oss上
         run: ossutil cp docs/.vuepress/dist/ oss://ming-master/ -rf
       - name: 部署ming-master完成
-          run: |
+        run: |
             curl --version
             echo ${{ secrets.OSS_ACCESS_KEY_ID }}
