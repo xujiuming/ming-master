@@ -14,12 +14,12 @@ jobs:
       - name: 开始部署ming-master
         run: |
             curl --version
-            echo  'https://oapi.dingtalk.com/robot/send?access_token=${{ DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
+            echo  'https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
                  "text": {
                       "content": "我就是我, 是不一样的烟火"
                  }
                }'
-            curl 'https://oapi.dingtalk.com/robot/send?access_token=${{ DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
+            curl 'https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
                             "text": {
                                  "content": "ming-master开始部署"
                             }
