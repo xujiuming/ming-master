@@ -13,12 +13,6 @@ jobs:
           node-version: "12.x"
       - name: 开始部署ming-master
         run: |
-            curl --version
-            echo  'https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
-                 "text": {
-                      "content": "我就是我, 是不一样的烟火"
-                 }
-               }'
             curl 'https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
                             "text": {
                                  "content": "ming-master开始部署"
@@ -39,5 +33,8 @@ jobs:
         run: ossutil cp docs/.vuepress/dist/ oss://ming-master/ -rf
       - name: 部署ming-master完成
         run: |
-            curl --version
-            echo ${{ secrets.OSS_ACCESS_KEY_ID }}
+          curl 'https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
+                                      "text": {
+                                           "content": "ming-master部署成功"
+                                      }
+                                    }'
