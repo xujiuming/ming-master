@@ -16,7 +16,7 @@ jobs:
       - name: 构建vuepress静态文件
         run: |
           npm install
-          hexo run docs:build
+          npm run docs:build
       - uses: manyuanrong/setup-ossutil@v1.0
         with:
           # endpoint 可以去oss控制台上查看
