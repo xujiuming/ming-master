@@ -41,10 +41,3 @@ jobs:
         run: |
             curl --version
             echo ${{ secrets.OSS_ACCESS_KEY_ID }}
-
-
-          curl 'https://oapi.dingtalk.com/robot/send?access_token=${{ DINGTALK_ACCESS_TOKEN }}' -H 'Content-Type: application/json' -d '{"msgtype": "text",
-              "text": {
-                   "content": "我就是我, 是不一样的烟火"
-              }
-            }'
