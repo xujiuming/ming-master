@@ -1,7 +1,8 @@
 module.exports = {
+    plugins: ['vue-cute-timeline'],
     serviceWorker: true,
     title: 'ming',
-    description: 'ming',
+    description: '不做不说',
     head: [
         ['link', {rel: 'icon', href: '/img/logo.ico'}],
         ['link', {rel: 'manifest', href: '/manifest.json'}],
@@ -19,7 +20,7 @@ module.exports = {
         sidebar: 'auto',
         nav: [
             {text: '主页', link: '/'},
-            {text: '博客', link: "/blog/"},
+            {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
             {text: 'Github', link: 'https://www.github.com/xujiuming'},
             {text: 'hexo博客', link: 'https://blog.xujiuming.com'},
