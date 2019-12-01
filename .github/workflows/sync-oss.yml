@@ -1,11 +1,28 @@
-name: sync-oss
+# 参考: https://www.jianshu.com/p/99952652b2dd
 
+name: sync-oss
+# 初期监听push事件  后续按情况调整
 on: [push]
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: echo
-        run: echo 'sync ming-master to oss'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: 构建vuepress静态文件
+        run: |
+          npm install
+          hexo run docs:build
+      - uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          # endpoint 可以去oss控制台上查看
+          endpoint: "oss-cn-shanghai.aliyuncs.com"
+          # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
+          access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+      - name: 同步dist文件到oss上
+        run: ossutil cp docs/.vuepress/dist/ oss://ming-master/ -rf

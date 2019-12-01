@@ -1,5 +1,1 @@
----
-sidebar: false
----
-
-####  ming 
+##  ming 
