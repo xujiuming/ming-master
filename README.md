@@ -2,11 +2,16 @@
 ming主站静态页面
 
 ## 时间点
+#### 2019年12月01日
+* 使用vuepress 
+* 使用github actions 做自动化
+* 依托于 aliyun oss服务 +cdn服务
 
 #### 2019年11月29日
 * 确定使用vue+element 重构master 
 * 拆分 连接位置  分为 个人、公司、工具 
 * 增加单独简历页  
+
 
 
 
