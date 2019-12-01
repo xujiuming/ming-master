@@ -1,17 +1,24 @@
-.DS_Store
-node_modules/
-/dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-/test/unit/coverage/
-/test/e2e/reports/
-selenium-debug.log
+docs/.vuepress/dist
+node_modules
+# Created by .ignore support plugin (hsz.mobi)
+### Vue template
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
 
-# Editor directories and files
+
+# TODO: where does this rule come from?
+test/
+
+### Example user template template
+### Example user template
+
+# IntelliJ project files
 .idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.iml
+out
+gen
+将删除 node_modules/
+将删除 package-lock.json
+将删除 docs/.vuepress/dist/
+将删除 docs/.vuepress/public/
