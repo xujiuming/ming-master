@@ -1,5 +1,10 @@
 module.exports = {
-    plugins: ['vue-cute-timeline'],
+    //添加插件配置
+    plugins: [
+        // 时间线依赖
+        'vue-cute-timeline'
+    ],
+    //开启pwa
     serviceWorker: true,
     title: 'ming',
     description: '不做不说',
