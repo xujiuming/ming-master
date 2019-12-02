@@ -2,7 +2,8 @@ module.exports = {
     //添加插件配置
     plugins: [
         // 时间线依赖
-        'vue-cute-timeline'
+        'vue-cute-timeline',
+        'echarts'
     ],
     //开启pwa
     serviceWorker: true,
@@ -10,7 +11,7 @@ module.exports = {
     description: '不做不说',
     head: [
         ['link', {rel: 'icon', href: '/img/logo.ico'}],
-        ['link', {rel: 'manifest', href: '/manifest.json'}],
+        ['link', {rel: 'manifest', href: '/manifest.json'}]
     ],
     themeConfig: {
         //开启搜索
@@ -27,6 +28,7 @@ module.exports = {
             {text: '主页', link: '/'},
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
+            // {text: 'blog', link: '/blog/'},
             {text: 'Github', link: 'https://www.github.com/xujiuming'},
             {text: 'hexo博客', link: 'https://blog.xujiuming.com'},
         ],

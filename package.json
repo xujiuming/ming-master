@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "dependencies": {
+    "echarts": "^4.5.0",
     "vue-cute-timeline": "^1.2.8",
+    "vue-echarts": "^4.0.4",
     "vuepress": "^1.2.0",
     "yarn": "^1.19.2"
   },
