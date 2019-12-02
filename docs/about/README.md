@@ -33,6 +33,10 @@ export default {
                },
                {
                  name: 'docker',
+                 value: 30
+               },
+               {
+                 name: 'linux',
                  value: 10
                },
           ]

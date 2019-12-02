@@ -10,6 +10,14 @@ module.exports = {
     serviceWorker: true,
     title: 'ming',
     description: '不做不说',
+    locales: {
+        //配置默认 语言
+        '/': {
+            lang: 'zh-CN',
+            title: 'ming',
+            description: '不做不说'
+        }
+    },
     head: [
         ['link', {rel: 'icon', href: '/img/logo.ico'}],
         ['link', {rel: 'manifest', href: '/manifest.json'}]
