@@ -7,7 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 检出代码
       - uses: actions/checkout@v1
+      # 安装node 指定版本
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
@@ -18,10 +20,12 @@ jobs:
                                "content": "ming-master开始部署"
                           }
                         }'
+      # 构建
       - name: 构建vuepress静态文件
         run: |
           npm install
           npm run docs:build
+      # 使用oss util 复制dist目录到oss
       - uses: manyuanrong/setup-ossutil@v1.0
         with:
           # endpoint 可以去oss控制台上查看
