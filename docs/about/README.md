@@ -2,7 +2,6 @@
 sidebar: false
 ---
 
-
 # ming 
 ## 联系方式 
 * 邮箱 18120580001@163.com 
@@ -12,6 +11,7 @@ sidebar: false
 
 
 ## 技能
+
 <WordCloudChart :word_list="words"></WordCloudChart>
 
 
@@ -38,7 +38,7 @@ export default {
                {
                  name: 'linux',
                  value: 10
-               },
+               }
           ]
         };
       }
