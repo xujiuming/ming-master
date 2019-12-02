@@ -3,7 +3,8 @@ module.exports = {
     plugins: [
         // 时间线依赖
         'vue-cute-timeline',
-        'echarts'
+        'echarts',
+        'echarts-wordcloud'
     ],
     //开启pwa
     serviceWorker: true,
