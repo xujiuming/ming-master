@@ -18,8 +18,7 @@ module.exports = {
         }
     },
     head: [
-        ['link', {rel: 'icon', href: '/img/logo.ico'}],
-        ['link', { rel: 'manifest', href: '/manifest.json' }]
+        ['link', {rel: 'icon', href: '/img/logo.ico'}]
     ],
     themeConfig: {
         //开启搜索
