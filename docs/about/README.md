@@ -12,6 +12,9 @@ sidebar: false
 
 ## 技能
 
+<my-word-cloud :words="myWords"></my-word-cloud>
+
+
 
 
 
@@ -24,19 +27,10 @@ export default {
           '2017-03-01~2017-11-25 牧美信息科技(java开发)',
           '2016-06-01~2017-02-28 电信外包(java开发)'
           ],
-          words: [
-               {
-                 name: 'java',
-                 value: 30
-               },
-               {
-                 name: 'docker',
-                 value: 30
-               },
-               {
-                 name: 'linux',
-                 value: 10
-               }
+          myWords: [
+                ['java',30],
+                ['docker',20],
+                ['linux',10]
           ]
         };
       }

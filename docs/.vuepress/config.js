@@ -3,6 +3,7 @@ module.exports = {
     plugins: [
         // 时间线依赖
         'vue-cute-timeline',
+        'vuewordcloud'
     ],
     //开启pwa
     serviceWorker: true,
@@ -10,7 +11,7 @@ module.exports = {
     description: '不做不说',
     locales: {
         //配置默认 语言
-        '/': {
+        '': {
             lang: 'zh-CN',
             title: 'ming',
             description: '不做不说'
@@ -35,6 +36,7 @@ module.exports = {
             {text: '主页', link: '/'},
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
+            // {text: 'blo', link: '/blog/'},
             {text: 'Github', link: 'https://www.github.com/xujiuming'},
             {text: 'hexo博客', link: 'https://blog.xujiuming.com'},
         ],
