@@ -3,8 +3,6 @@ module.exports = {
     plugins: [
         // 时间线依赖
         'vue-cute-timeline',
-        'echarts',
-        'echarts-wordcloud'
     ],
     //开启pwa
     serviceWorker: true,
@@ -37,7 +35,6 @@ module.exports = {
             {text: '主页', link: '/'},
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
-            // {text: 'blog', link: '/blog/'},
             {text: 'Github', link: 'https://www.github.com/xujiuming'},
             {text: 'hexo博客', link: 'https://blog.xujiuming.com'},
         ],

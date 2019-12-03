@@ -7,12 +7,10 @@ sidebar: false
 * 邮箱 18120580001@163.com 
 
 ## 工作经历 
-<timeline :eventList="workerHistoryEventList"></timeline>
+<my-timeline :eventList="workerHistoryEventList"></my-timeline>
 
 
 ## 技能
-
-<WordCloudChart :word_list="words"></WordCloudChart>
 
 
 

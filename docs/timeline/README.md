@@ -4,7 +4,7 @@ sidebar: false
 
 
 ## 时间线
-<timeline :eventList="eventList"></timeline>
+<my-timeline :eventList="eventList"></my-timeline>
 
 <script >
 export default {
