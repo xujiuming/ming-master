@@ -3,7 +3,8 @@ module.exports = {
     plugins: [
         // 时间线依赖
         'vue-cute-timeline',
-        'vuewordcloud'
+        'vuewordcloud',
+        'vue-json-views'
     ],
     //开启pwa
     serviceWorker: true,
@@ -32,21 +33,21 @@ module.exports = {
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
         sidebar: [
-            {
-                title: '加密/解密工具',   // 必要的
-                path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
-                sidebarDepth: 1,    // 可选的, 默认值是 1
-                children: [
-                    ['/tools/secret/MD5','MD5加密工具'],
-                    ['/tools/secret/SHA-1','SHA-1加密工具'],
-                ]
-            },
+            // {
+            //     title: '加密/解密工具',   // 必要的
+            //     path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
+            //     sidebarDepth: 1,    // 可选的, 默认值是 1
+            //     children: [
+            //         ['/tools/secret/MD5','MD5加密工具'],
+            //         ['/tools/secret/SHA-1','SHA-1加密工具'],
+            //     ]
+            // },
             {
                 title: '数据格式处理工具',   // 必要的
                 path: '/tools/dataFormat/',      // 可选的, 应该是一个绝对路径
                 sidebarDepth: 1,    // 可选的, 默认值是 1
                 children: [
-                    ['/tools/dataFormat/jsonFormat','json格式化工具'],
+                    ['/tools/dataFormat/jsonFormat', 'json格式化工具'],
                 ]
             }
         ],
@@ -55,7 +56,7 @@ module.exports = {
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
             {text: '常用链接', link: '/link/'},
-            // {text: '常用工具', link: '/tools/'},
+            {text: '常用工具', link: '/tools/'},
         ],
 
     },
