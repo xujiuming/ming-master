@@ -12,7 +12,9 @@
                 <button class="btn btn-success" type="button" v-on:click="toJsonData">=></button>
             </div>
             <div class="col-5">
-                <json-view :data="jsonData" :theme="theme"/>
+                <ClientOnly>
+                    <json-view :data="jsonData" :theme="theme"/>
+                </ClientOnly>
             </div>
         </div>
     </div>
