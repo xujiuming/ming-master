@@ -5,23 +5,39 @@
     <div class="container">
         <div class="row">
             <div class="col-5 form-group">
-                <input @keyup.enter="toMd5LowerCase32" type="text" v-model="oldMd5"/>
+                <input @keyup.enter="toMd5" type="text" v-model="oldMd5"/>
             </div>
-            <div class="col-3">
-                <button class="btn btn-success" type="button" v-on:click="toMd5LowerCase32">32位小写=></button>
+            <div class="col-1">
+                <button class="btn btn-success" type="button" v-on:click="toMd5">=></button>
             </div>
-            <div class="col-4">
-                {{ newMd5 }}
-            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4 offset-1">
+                        32位小写:
+                    </div>
+                    <div class="col-6">
+                        {{ newMd5LowerCase32 }}
+                    </div>
 
-            <div class="col-3 offset-5 form-group">
-                <button class="btn btn-success" type="button" v-on:click="toMd5UpperCase32">32位大写=></button>
-            </div>
-            <div class="col-3 offset-5 form-group">
-                <button class="btn btn-success" type="button" v-on:click="toMd5LowerCase16">16位小写=></button>
-            </div>
-            <div class="col-3 offset-5 form-group">
-                <button class="btn btn-success" type="button" v-on:click="toMd5UpperCase16">16位大写=></button>
+                    <div class="col-4 offset-1">
+                        32位大写:
+                    </div>
+                    <div class="col-6">
+                        {{ newMd5UpperCase32 }}
+                    </div>
+                    <div class="col-4 offset-1">
+                        16位小写:
+                    </div>
+                    <div class="col-6">
+                        {{ newMd5LowerCase16 }}
+                    </div>
+                    <div class="col-4 offset-1">
+                        16位大写:
+                    </div>
+                    <div class="col-6">
+                        {{ newMd5UpperCase16 }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -34,36 +50,21 @@
         data() {
             return {
                 oldMd5: '',
-                newMd5: '',
+                newMd5LowerCase32: '',
+                newMd5UpperCase32: '',
+                newMd5LowerCase16: '',
+                newMd5UpperCase16: '',
             }
         },
         methods: {
-            toMd5LowerCase32: function () {
+            toMd5:function(){
                 try {
-                    this.newMd5 = cryptoJs.MD5(this.oldMd5).toString().toLowerCase();
+                    this.newMd5LowerCase32 = cryptoJs.MD5(this.oldMd5).toString().toLowerCase();
+                    this.newMd5UpperCase32 = this.newMd5LowerCase32.toUpperCase();
+                    this.newMd5LowerCase16 = this.newMd5LowerCase32.substring(8,24);
+                    this.newMd5UpperCase16 = this.newMd5LowerCase16.toUpperCase();
                 } catch (e) {
-                    this.newMd5 = e;
-                }
-            },
-            toMd5UpperCase32: function () {
-                try {
-                    this.newMd5 = cryptoJs.MD5(this.oldMd5).toString().toUpperCase();
-                } catch (e) {
-                    this.newMd5 = e;
-                }
-            },
-            toMd5LowerCase16: function () {
-                try {
-                    this.newMd5 = cryptoJs.MD5(this.oldMd5).toString().substring(8,24).toLowerCase();
-                } catch (e) {
-                    this.newMd5 = e;
-                }
-            },
-            toMd5UpperCase16: function () {
-                try {
-                    this.newMd5 = cryptoJs.MD5(this.oldMd5).toString().substring(8,24).toUpperCase();
-                } catch (e) {
-                    this.newMd5 = e;
+                    this.newMd5LowerCase32 = e;
                 }
             }
         }
