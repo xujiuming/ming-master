@@ -11,6 +11,7 @@ export default {
       data(){
         return {
           eventList: [
+          '2019-12-23 17:00:00 添加json格式化工具、md5加密工具',
           '2019-12-03 16:00:00 添加词云组件、hexo博客使用github actions部署',
           '2019-12-01 19:00:00 github actions自动编译部署到oss',
           '2019-12-01 14:00:00 主站改版(使用vuepress+github actions + oss)'

@@ -4,7 +4,8 @@ module.exports = {
         // 时间线依赖
         'vue-cute-timeline',
         'vuewordcloud',
-        'vue-json-views'
+        'vue-json-views',
+        'crypto-js'
     ],
     //开启pwa
     serviceWorker: true,
@@ -33,15 +34,17 @@ module.exports = {
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
         sidebar: [
-            // {
-            //     title: '加密/解密工具',   // 必要的
-            //     path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
-            //     sidebarDepth: 1,    // 可选的, 默认值是 1
-            //     children: [
-            //         ['/tools/secret/MD5','MD5加密工具'],
-            //         ['/tools/secret/SHA-1','SHA-1加密工具'],
-            //     ]
-            // },
+            {
+                title: '加密/解密工具',   // 必要的
+                path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
+                sidebarDepth: 1,    // 可选的, 默认值是 1
+                children: [
+                    ['/tools/secret/MD5','MD5加密工具'],
+                    // ['/tools/secret/SHA-1','SHA-1加密工具'],
+                    // ['/tools/secret/SHA-256','SHA-256加密工具'],
+                    // ['/tools/secret/sm3','sm3加密工具'],
+                ]
+            },
             {
                 title: '数据格式处理工具',   // 必要的
                 path: '/tools/dataFormat/',      // 可选的, 应该是一个绝对路径

@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.1.0",
+    "crypto-js": "^3.1.9-1",
     "vue-cute-timeline": "^1.2.8",
     "vue-json-views": "^1.1.0",
     "vuepress": "^1.2.0",
