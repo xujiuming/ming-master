@@ -14,7 +14,7 @@
     "vue-json-views": "^1.1.0",
     "vuepress": "^1.2.0",
     "vuewordcloud": "^18.7.11",
-    "yarn": "^1.19.2"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {},
   "scripts": {
