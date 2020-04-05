@@ -7,6 +7,10 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+
+
+
+
 export default ({
                     Vue, // VuePress 正在使用的 Vue 构造函数
                     options, // 附加到根实例的一些选项
@@ -16,6 +20,6 @@ export default ({
     //使用 vuewordcloud 组件
     Vue.component(VueWordCloud.name, VueWordCloud)
     //使用bootstrap
-    Vue.use(BootstrapVue)
+    Vue.use(BootstrapVue);
 }
 

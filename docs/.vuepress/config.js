@@ -5,7 +5,8 @@ module.exports = {
         'vue-cute-timeline',
         'vuewordcloud',
         'vue-json-views',
-        'crypto-js'
+        'crypto-js',
+        'vkbeautify'
     ],
     //开启pwa
     serviceWorker: true,
@@ -51,6 +52,7 @@ module.exports = {
                 sidebarDepth: 1,    // 可选的, 默认值是 1
                 children: [
                     ['/tools/dataFormat/jsonFormat', 'json格式化工具'],
+                    ['/tools/dataFormat/xmlFormat', 'xml格式化工具'],
                 ]
             }
         ],
