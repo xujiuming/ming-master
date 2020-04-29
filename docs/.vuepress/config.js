@@ -6,7 +6,8 @@ module.exports = {
         'vuewordcloud',
         'vue-json-views',
         'crypto-js',
-        'vkbeautify'
+        'vkbeautify',
+        '@xkeshi/vue-qrcode'
     ],
     //开启pwa
     serviceWorker: true,
@@ -40,8 +41,8 @@ module.exports = {
                 path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
                 sidebarDepth: 1,    // 可选的, 默认值是 1
                 children: [
-                    ['/tools/secret/MD5','MD5加密工具'],
-                    ['/tools/secret/SHA','SHA加密工具'],
+                    ['/tools/secret/MD5', 'MD5加密工具'],
+                    ['/tools/secret/SHA', 'SHA加密工具'],
                     // ['/tools/secret/SHA-256','SHA-256加密工具'],
                     // ['/tools/secret/sm3','sm3加密工具'],
                 ]
@@ -53,6 +54,7 @@ module.exports = {
                 children: [
                     ['/tools/dataFormat/jsonFormat', 'json格式化工具'],
                     ['/tools/dataFormat/xmlFormat', 'xml格式化工具'],
+                    ['/tools/dataFormat/qrCodeViews', '二维码工具'],
                 ]
             }
         ],

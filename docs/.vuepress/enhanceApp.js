@@ -3,12 +3,10 @@
  */
 import VueWordCloud from 'vuewordcloud';
 import BootstrapVue from 'bootstrap-vue'
+import QrCode from '@xkeshi/vue-qrcode';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-
-
 
 
 export default ({
@@ -19,6 +17,7 @@ export default ({
                 }) => {
     //使用 vuewordcloud 组件
     Vue.component(VueWordCloud.name, VueWordCloud)
+    Vue.component(QrCode.name, QrCode)
     //使用bootstrap
     Vue.use(BootstrapVue);
 }

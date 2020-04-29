@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "dependencies": {
+    "@xkeshi/vue-qrcode": "github:xkeshi/vue-qrcode",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.1.0",
     "crypto-js": "^3.1.9-1",
