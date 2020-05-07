@@ -1,8 +1,21 @@
+const moment = require('moment');
+
 module.exports = {
     //只兼容 常青树浏览器  1180 1148
     evergreen: true,
     //添加插件配置
     plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 moment
+                    const moment = require('moment')
+                    moment.locale(lang)
+                    return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
+                }
+            }
+        ],
         // 时间线依赖
         'vue-cute-timeline',
         'vuewordcloud',
