@@ -1,4 +1,6 @@
 module.exports = {
+    //只兼容 常青树浏览器  1180 1148
+    evergreen: true,
     //添加插件配置
     plugins: [
         // 时间线依赖
@@ -9,8 +11,6 @@ module.exports = {
         'vkbeautify',
         '@xkeshi/vue-qrcode'
     ],
-    //开启pwa
-    serviceWorker: true,
     locales: {
         //配置默认 语言
         '/': {
