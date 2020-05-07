@@ -14,7 +14,7 @@ module.exports = {
     locales: {
         //配置默认 语言
         '/': {
-            lang: 'zh-CN',
+            lang: 'zh',
             title: 'ming',
             description: '不做不说'
         }
