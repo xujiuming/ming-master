@@ -54,10 +54,9 @@ module.exports = {
                 path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
                 sidebarDepth: 1,    // 可选的, 默认值是 1
                 children: [
-                    ['/tools/secret/MD5', 'MD5加密工具'],
-                    ['/tools/secret/SHA', 'SHA加密工具'],
-                    // ['/tools/secret/SHA-256','SHA-256加密工具'],
-                    // ['/tools/secret/sm3','sm3加密工具'],
+                    ['/tools/secret/MD5', 'MD5加密'],
+                    ['/tools/secret/SHA', 'SHA加密'],
+                    ['/tools/secret/URI','URI编码/解码'],
                 ]
             },
             {

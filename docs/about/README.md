@@ -30,7 +30,8 @@ export default {
           myWords: [
                 ['java',30],
                 ['docker',20],
-                ['linux',10]
+                ['linux',10],
+                ['devops/sre',20]
           ]
         };
       }
