@@ -8,6 +8,7 @@
             </div>
             <div class="col-1">
                 <button class="btn btn-success" type="button" v-on:click="toEncodeURIComponent">=></button>
+                <hr/>
                 <button class="btn btn-success" type="button" v-on:click="toDecodeURIComponent"><=</button>
             </div>
             <div class="col-5">
@@ -24,6 +25,7 @@
             </div>
             <div class="col-1">
                 <button class="btn btn-success" type="button" v-on:click="toEncodeURI">=></button>
+                <hr/>
                 <button class="btn btn-success" type="button" v-on:click="toDecodeURI"><=</button>
             </div>
             <div class="col-5">
