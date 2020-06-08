@@ -33,7 +33,8 @@ module.exports = {
         }
     },
     head: [
-        ['link', {rel: 'icon', href: '/img/logo.ico'}]
+        ['link', {rel: 'icon', href: '/img/logo.ico'}],
+        ['script', {type: 'text/javascript', src: "/js/baiduStathm.js"}]
     ],
     themeConfig: {
         //开启搜索
@@ -56,7 +57,7 @@ module.exports = {
                 children: [
                     ['/tools/secret/MD5', 'MD5加密'],
                     ['/tools/secret/SHA', 'SHA加密'],
-                    ['/tools/secret/URI','URI编码/解码'],
+                    ['/tools/secret/URI', 'URI编码/解码'],
                 ]
             },
             {
