@@ -69,6 +69,14 @@ module.exports = {
                     ['/tools/dataFormat/xmlFormat', 'xml格式化工具'],
                     ['/tools/dataFormat/qrCodeViews', '二维码工具'],
                 ]
+            },
+            {
+                title: 'AI工具',
+                path: '/tools/ai/',
+                sidebarDepth: 1,
+                children: [
+                    ['/tools/ai/imageTextOCR', '图片通用文本识别'],
+                ]
             }
         ],
         nav: [
