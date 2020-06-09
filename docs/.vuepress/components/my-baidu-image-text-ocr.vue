@@ -59,7 +59,7 @@
                             'Content-Type': 'multipart/form-data',
                         }
                     };
-                    axios.post('http://api.xujiuming.com/api/ai/image-text-ocr', formData, config)
+                    axios.post('https://api.xujiuming.com/api/ai/image-text-ocr', formData, config)
                         .then((response) => {
                             this.imageTextInfo = response.data
                             for (let item of this.imageTextInfo.words_result) {
