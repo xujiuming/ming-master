@@ -41,7 +41,7 @@
         },
         methods: {
             uploadFile(el) {
-                this.valueUrl = '';
+                this.imageText = '';
                 if (!el.target.files[0].size) return; // 如果文件大小为0，则返回
                 if (el.target.files[0].type.indexOf('image') === -1) { //如果不是图片格式
                     alert('请选择图片文件')
