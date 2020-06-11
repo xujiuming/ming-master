@@ -22,7 +22,8 @@ module.exports = {
         'vue-json-views',
         'crypto-js',
         'vkbeautify',
-        '@xkeshi/vue-qrcode'
+        '@xkeshi/vue-qrcode',
+        'qrcode-reader'
     ],
     locales: {
         //配置默认 语言
