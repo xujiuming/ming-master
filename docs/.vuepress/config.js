@@ -78,6 +78,14 @@ module.exports = {
                 children: [
                     ['/tools/ai/imageTextOCR', '图片通用文本识别'],
                 ]
+            },
+            {
+                title: 'NET工具',
+                path: '/tools/net/',
+                sidebarDepth: 1,
+                children: [
+                    ['/tools/net/WebSocketTest', 'websocket工具'],
+                ]
             }
         ],
         nav: [
