@@ -22,9 +22,9 @@
             <ul class="list-group">
                 <li class="list-group-item" v-for="item in showMessage">
                     <span v-if="item.type === 'client'" style="color: #7abaff;font-size: 18px"
-                          class="badge">客户端消息:</span>
+                          class="badge">客户端发送消息:</span>
                     <span v-if="item.type === 'server'" style="color: #34ce57;font-size: 18px"
-                          class="badge">服务端消息:</span>
+                          class="badge">服务端推送消息:</span>
                     {{item.message}}
                 </li>
             </ul>
@@ -42,7 +42,7 @@
         },
         data() {
             return {
-                wsAddress: '',
+                wsAddress: 'wss://echo.websocket.org',
                 sendMessage: '',
                 showMessage: [],
                 socket: {}
@@ -54,8 +54,8 @@
                     alert("websocket地址为null!")
                     return
                 }
-                if (!(this.wsAddress.startsWith('ws://') || this.wsAddress.startsWith('wss://'))) {
-                    alert("websocket地址错误必须是ws://或者wss://开头")
+                if (! this.wsAddress.startsWith('wss://')) {
+                    alert("websocket地址错误必须是wss://开头")
                     return
                 }
                 // 实例化socket
