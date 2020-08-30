@@ -51,41 +51,37 @@ module.exports = {
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
         sidebar: [
-            {
-                title: '加密/解密工具',   // 必要的
-                path: '/tools/secret/',      // 可选的, 应该是一个绝对路径
-                sidebarDepth: 1,    // 可选的, 默认值是 1
-                children: [
-                    ['/tools/secret/MD5', 'MD5加密'],
-                    ['/tools/secret/SHA', 'SHA加密'],
-                    ['/tools/secret/URI', 'URI编码/解码'],
-                ]
+            {  title: 'MD5加密',   
+                path: '/tools/secret/MD5',      
+                sidebarDepth: 1  
             },
-            {
-                title: '数据格式处理工具',   // 必要的
-                path: '/tools/dataFormat/',      // 可选的, 应该是一个绝对路径
-                sidebarDepth: 1,    // 可选的, 默认值是 1
-                children: [
-                    ['/tools/dataFormat/jsonFormat', 'json格式化工具'],
-                    ['/tools/dataFormat/xmlFormat', 'xml格式化工具'],
-                    ['/tools/dataFormat/qrCodeViews', '二维码工具'],
-                ]
+            {  title: 'SHA加密',   
+                path: '/tools/secret/SHA',      
+                sidebarDepth: 1  
             },
-            {
-                title: 'AI工具',
-                path: '/tools/ai/',
-                sidebarDepth: 1,
-                children: [
-                    ['/tools/ai/imageTextOCR', '图片通用文本识别'],
-                ]
+            {  title: 'URI编码/解码',   
+                path: '/tools/secret/URI',      
+                sidebarDepth: 1  
             },
-            {
-                title: 'NET工具',
-                path: '/tools/net/',
-                sidebarDepth: 1,
-                children: [
-                    ['/tools/net/WebSocketTest', 'websocket工具'],
-                ]
+            {  title: 'json格式化工具',   
+                path: '/tools/dataFormat/jsonFormat',      
+                sidebarDepth: 1  
+            },
+            {  title: 'xml格式化工具',   
+                path: '/tools/dataFormat/xmlFormat',      
+                sidebarDepth: 1  
+            },
+            {  title: '二维码工具',   
+                path: '/tools/dataFormat/qrCodeViews',      
+                sidebarDepth: 1  
+            },
+            {  title: '图片通用文本识别',   
+                path: '/tools/ai/imageTextOCR',      
+                sidebarDepth: 1  
+            },
+            {  title: 'websocket工具',   
+                path: '/tools/net/WebSocketTest',      
+                sidebarDepth: 1   
             }
         ],
         nav: [
