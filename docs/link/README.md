@@ -6,7 +6,7 @@ sidebar: false
 
 ### [Github](https://www.github.com/xujiuming)  
 ### [hexo博客](https://blog.xujiuming.com)  
-### [示例](http://tx.xujiuming.com)  
+### [常用功能示例](http://show.xujiuming.com)  
 
 # 工作链接
 ### [confluence](http://47.101.196.66:8090/#all-updates)
