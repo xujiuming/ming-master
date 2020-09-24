@@ -23,7 +23,8 @@ module.exports = {
         'crypto-js',
         'vkbeautify',
         '@xkeshi/vue-qrcode',
-        'qrcode-reader'
+        'qrcode-reader',
+        'vue-monaco-editor'
     ],
     locales: {
         //配置默认 语言
@@ -51,6 +52,10 @@ module.exports = {
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
         sidebar: [
+            {  title: '代码在线编辑器',
+                path: '/tools/myMonacoEditor',
+                sidebarDepth: 1
+            },
             {  title: 'MD5加密',   
                 path: '/tools/secret/MD5',      
                 sidebarDepth: 1  
