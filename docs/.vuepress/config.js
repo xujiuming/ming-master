@@ -68,6 +68,10 @@ module.exports = {
                 path: '/tools/secret/URI',      
                 sidebarDepth: 1  
             },
+            {  title: 'BASE64编码/解码',
+                path: '/tools/secret/BASE64',
+                sidebarDepth: 1
+            },
             {  title: 'json格式化工具',   
                 path: '/tools/dataFormat/jsonFormat',      
                 sidebarDepth: 1  
