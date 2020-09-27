@@ -24,7 +24,8 @@ module.exports = {
         'vkbeautify',
         '@xkeshi/vue-qrcode',
         'qrcode-reader',
-        'vue-monaco-editor'
+        'vue-monaco-editor',
+        'calculatorjs'
     ],
     locales: {
         //配置默认 语言
@@ -54,6 +55,10 @@ module.exports = {
         sidebar: [
             {  title: '代码在线编辑器',
                 path: '/tools/myMonacoEditor',
+                sidebarDepth: 1
+            },
+            {  title: '简易计算器',
+                path: '/tools/myCalculator',
                 sidebarDepth: 1
             },
             {  title: 'MD5加密',   
