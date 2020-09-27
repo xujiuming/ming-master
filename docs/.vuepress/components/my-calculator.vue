@@ -50,17 +50,18 @@
 export default {
   data() {
     return {
-      calcText: ''
+      calcText: '0'
     }
   },
   methods: {
+
     runCalcText: function () {
       let calc = require('calculatorjs')
-      console.log(calc(this.calcText))
-      //check text   https://github.com/fzred/calculatorjs
-      // + - * / ( )  和数字
-
-      this.calcText = calc(this.calcText)
+      try {
+        this.calcText = calc(this.calcText)
+      } catch (e) {
+        this.calcText = e.toString()
+      }
     },
     addCalcText: function (value) {
       this.calcText = this.calcText + value
@@ -69,7 +70,7 @@ export default {
       this.calcText = this.calcText.substring(0, this.calcText.length - 1)
     },
     cleanCalcText: function () {
-      this.calcText = ''
+      this.calcText = '0'
     }
   }
 }
