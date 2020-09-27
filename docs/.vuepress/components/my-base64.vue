@@ -1,21 +1,23 @@
 <template>
   <div class="container" style="width: 100%;height: 100%">
     <div class="row">
+      <span>明文:</span>
       <div class="col-5 form-group">
-        <label>明文:</label>
         <textarea class="form-control" rows="10" v-model="leftData"/>
       </div>
       <div class="col-1">
         <button class="btn btn-success" type="button" @click="leftDataToRightData">=></button>
         <button class="btn btn-success" type="button" @click="rightDataToLeftData"><=</button>
       </div>
+      <label>密文:</label>
       <div class="col-5">
-        <label>密文:</label>
         <textarea class="form-control" rows="10" v-model="rightData"/>
       </div>
     </div>
 
     <div class="row">
+
+      <label>图片:</label>
       <div class="col-5 form-group">
         <input class="form-control" type="file" @change="showFile($event)" name="file"/>
         <div v-if="fileUrl">
@@ -23,13 +25,14 @@
           <img :src="fileUrl">
         </div>
       </div>
+      <label>密文:</label>
       <div class="col-1">
-        <button class="btn btn-success" type="button" @click="leftImageDataToRightImageData">=></button>
+        <button class="btn btn-success" type="button" >=></button>
         <button class="btn btn-success" type="button" @click="rightImageDataToLeftImageData"><=</button>
       </div>
       <div class="col-5">
         <div class="response">
-          <textarea class="form-control" rows="10" v-model="rightData"/>
+          <textarea class="form-control" rows="10" v-model="rightImageData"/>
         </div>
       </div>
     </div>
@@ -47,7 +50,7 @@ export default {
       leftData: '',
       rightImageData: '',
       leftImageData: '',
-      fileUrl: ''
+      fileUrl:''
     }
   },
   methods: {
@@ -57,10 +60,8 @@ export default {
     rightDataToLeftData() {
       this.leftData = cryptoJs.enc.Base64.parse(this.rightData).toString(cryptoJs.enc.Utf8);
     },
-    leftImageDataToRightImageData() {
-
-    },
     rightImageDataToLeftImageData() {
+      this.fileUrl = this.rightImageData;
     },
 
     showFile(el) {
@@ -69,20 +70,11 @@ export default {
         alert('请选择图片文件')
       } else {
         const that = this;
-        let qrcodeReader = new QrcodeReader()
-        qrcodeReader.decode(this.getObjectURL(el.target.files[0]))
-        qrcodeReader.callback = function (err, result) {
-          if (err != null) {
-            that.qrCodeImageValue = '\n' + err
-          } else {
-            that.qrCodeImageValue = '\n' + result.result
-          }
-        }
         const reader = new FileReader(); // 创建读取文件对象
         reader.readAsDataURL(el.target.files[0]); // 发起异步请求，读取文件
         reader.onload = function () {  // 文件读取完成后
-          // 读取完成后，将结果赋值给img的src
-          that.qrCodeImageUrl = this.result;
+          that.fileUrl = this.result;
+          that.rightImageData = that.fileUrl
         };
 
       }
