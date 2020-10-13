@@ -5,6 +5,10 @@ module.exports = {
     evergreen: true,
     //添加插件配置
     plugins: [
+        ['@vuepress/search', {
+            searchMaxSuggestions: 10
+        }]
+        ,
         [
             '@vuepress/last-updated',
             {
@@ -42,8 +46,6 @@ module.exports = {
     themeConfig: {
         //开启搜索
         search: true,
-        //搜索 条数
-        searchMaxSuggestions: 10,
         //是否平滑滚动
         smoothScroll: true,
         // 1.接受字符串，它设置了最后更新时间的label，例如：最后更新时间：2019年5月3日 21:51:53

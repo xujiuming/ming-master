@@ -21,7 +21,8 @@
     "vue-monaco-editor": "0.0.19",
     "vuepress": "^1.5.1",
     "vuewordcloud": "^18.7.12",
-    "yarn": "^1.22.4"
+    "yarn": "^1.22.4",
+    "@vuepress/plugin-search": "^1.6.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -34,8 +35,8 @@
     "url": "git+https://github.com/xujiuming/ming-master.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "ming",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xujiuming/ming-master/issues"
   },
