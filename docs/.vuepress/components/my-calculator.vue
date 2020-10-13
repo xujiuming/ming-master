@@ -53,8 +53,18 @@ export default {
       calcText: '0'
     }
   },
+  mounted() {
+    let that = this
+    document.onkeydown = function (e) {
+      let keyCode = e.code
+      if (keyCode === 'Enter') {
+        that.runCalcText()
+      } else if (keyCode === 'Backspace') {
+        that.delOneCalcText()
+      }
+    }
+  },
   methods: {
-
     runCalcText: function () {
       let calc = require('calculatorjs')
       try {
@@ -67,7 +77,13 @@ export default {
       this.calcText = this.calcText + value
     },
     delOneCalcText: function () {
-      this.calcText = this.calcText.substring(0, this.calcText.length - 1)
+      if (this.calcText.length > 0) {
+        this.calcText = this.calcText.substring(0, this.calcText.length - 1)
+      }
+      //当文本清空后 默认为0
+      if (this.calcText.length === 0) {
+        this.calcText = '0'
+      }
     },
     cleanCalcText: function () {
       this.calcText = '0'
