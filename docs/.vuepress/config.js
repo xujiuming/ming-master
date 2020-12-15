@@ -103,7 +103,6 @@ module.exports = {
         nav: [
             {text: '主页', link: '/'},
             {text: '常用工具', link: '/tools/'},
-            {text: '常用链接', link: '/link/'},
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
         ],
