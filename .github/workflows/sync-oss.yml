@@ -30,6 +30,9 @@ jobs:
           npm run docs:build
       # 使用oss util 复制dist目录到oss
       - uses: manyuanrong/setup-ossutil@v1.0
+        env:
+          # 允许不安全指令
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         with:
           # endpoint 可以去oss控制台上查看
           endpoint: "oss-cn-shanghai.aliyuncs.com"
