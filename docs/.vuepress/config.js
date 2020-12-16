@@ -54,52 +54,65 @@ module.exports = {
         // sidebar: 'auto',
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
-        sidebar: [
-            {  title: '代码在线编辑器',
-                path: '/tools/myMonacoEditor',
-                sidebarDepth: 1
-            },
-            {  title: '简易计算器',
-                path: '/tools/myCalculator',
-                sidebarDepth: 1
-            },
-            {  title: 'MD5加密',   
-                path: '/tools/secret/MD5',      
-                sidebarDepth: 1  
-            },
-            {  title: 'SHA加密',   
-                path: '/tools/secret/SHA',      
-                sidebarDepth: 1  
-            },
-            {  title: 'URI编码/解码',   
-                path: '/tools/secret/URI',      
-                sidebarDepth: 1  
-            },
-            {  title: 'BASE64编码/解码',
-                path: '/tools/secret/BASE64',
-                sidebarDepth: 1
-            },
-            {  title: 'json格式化工具',   
-                path: '/tools/dataFormat/jsonFormat',      
-                sidebarDepth: 1  
-            },
-            {  title: 'xml格式化工具',   
-                path: '/tools/dataFormat/xmlFormat',      
-                sidebarDepth: 1  
-            },
-            {  title: '二维码工具',   
-                path: '/tools/dataFormat/qrCodeViews',      
-                sidebarDepth: 1  
-            },
-            {  title: '图片通用文本识别',   
-                path: '/tools/ai/imageTextOCR',      
-                sidebarDepth: 1  
-            },
-            {  title: 'websocket工具',   
-                path: '/tools/net/WebSocketTest',      
-                sidebarDepth: 1   
-            }
-        ],
+        sidebar: {
+            '/tools/': [
+                {
+                    title: '代码在线编辑器',
+                    path: '/tools/myMonacoEditor',
+                    sidebarDepth: 1
+                },
+                {
+                    title: '简易计算器',
+                    path: '/tools/myCalculator',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'MD5加密',
+                    path: '/tools/secret/MD5',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'SHA加密',
+                    path: '/tools/secret/SHA',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'URI编码/解码',
+                    path: '/tools/secret/URI',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'BASE64编码/解码',
+                    path: '/tools/secret/BASE64',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'json格式化工具',
+                    path: '/tools/dataFormat/jsonFormat',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'xml格式化工具',
+                    path: '/tools/dataFormat/xmlFormat',
+                    sidebarDepth: 1
+                },
+                {
+                    title: '二维码工具',
+                    path: '/tools/dataFormat/qrCodeViews',
+                    sidebarDepth: 1
+                },
+                {
+                    title: '图片通用文本识别',
+                    path: '/tools/ai/imageTextOCR',
+                    sidebarDepth: 1
+                },
+                {
+                    title: 'websocket工具',
+                    path: '/tools/net/WebSocketTest',
+                    sidebarDepth: 1
+                }
+            ]
+        },
         nav: [
             {text: '主页', link: '/'},
             {text: '常用工具', link: '/tools/'},
