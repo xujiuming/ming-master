@@ -55,6 +55,18 @@ module.exports = {
         //侧边栏自动生成标题代码  2=##
         // sidebarDepth: 2,
         sidebar: {
+            '/interview/':[
+                {
+                    title:"java基础",
+                    path:'/interview/java基础',
+                    sidebarDepth:1
+                },
+                {
+                    title:"linux基础",
+                    path:'/interview/linux基础',
+                    sidebarDepth:1
+                }
+            ],
             '/tools/': [
                 {
                     title: '代码在线编辑器',
@@ -116,6 +128,7 @@ module.exports = {
         nav: [
             {text: '主页', link: '/'},
             {text: '常用工具', link: '/tools/'},
+            {text: '面试问题汇总', link: '/interview/'},
             {text: '时间线', link: '/timeline/'},
             {text: '关于', link: '/about/'},
         ],

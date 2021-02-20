@@ -1,0 +1,40 @@
+### hashmap 实现和扩容规则
+
+* 实现 
+  1.7是数组+链表       
+  1.8是数组+链表+红黑树 当链表元素大于8 更换为红黑树、当缩减元素小于6更换为链表        
+  默认数组长度:16      
+  默认负载因子:0.75 在0.75负载因子下 大多数情况下是均匀分布的    
+
+> 处理hash冲突的方式 就是在hash数组对应的链表或者红黑树添加新的节点     
+> 计算hash使用hashCode 但是冲突的时候会使用equals去比较 判断是否添加到新节点
+> index=(hash(key) % 数组长度) 当计算的index相等的时候  则进行equals比较 添加进链表或者红黑树中 
+
+* 扩容   
+  jdk1.7: 建立一个新数组 把旧数组所有的元素 经过hash计算重新分配到新数组中 JDK1.7中rehash的时候，旧链表迁移新链表的时候，如果在新表的数组索引位置相同，则链表元素会倒置 jdk1.8: 建立新数组
+  长度为原数组的2倍(2n) 那么原来的元素要么在原index要么是原来的index+n (只需要看看原来的hash值新增的那个bit是1还是0就好了，是0的话索引没变，是1的话索引变成“原索引+oldCap”)
+
+* 其他关联子类     
+  * HashMap        
+    基于数组作为hash bucket    
+  * LinkedHashMap      
+    记录key顺序的hashmap   
+  * TreeMap: key排序的map    
+  * ConcurrentHashMap: 多线程安全的hashMap实现    
+
+* 线程安全的Hashmap有哪些      
+    * HashTable     
+    历史遗留集合 在需要考虑并发情况下的hashmap 直接使用concurrentHashMap   
+    * ConcurrentHashMap     
+        jdk1.7使用锁分段 Segment    
+        jdk1.8使用cas+synchronized    
+
+
+### volatile 作用和原理 
+强制cpu读取主存 不从l1 l2 l3之类的cpu缓存中读写数据 保证volatile修饰的内容一致性    
+
+JVM内存屏障插入策略：
+每个volatile写操作的前面插入一个StoreStore屏障   
+在每个volatile读操作的后面插入一个LoadStore屏障     
+
+
