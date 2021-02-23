@@ -53,18 +53,20 @@ module.exports = {
         // 所有页面全部开启自动生成侧边栏
         // sidebar: 'auto',
         //侧边栏自动生成标题代码  2=##
-        // sidebarDepth: 2,
+        sidebarDepth: 2,
         sidebar: {
-            '/interview/':[
+            '/interview/': [
                 {
-                    title:"java基础",
-                    path:'/interview/java基础',
-                    sidebarDepth:1
+                    title: "java基础",
+                    path: '/interview/java',
+                    children: [
+                        ['/interview/java/集合相关', '集合相关'],
+                        ['/interview/java/volatile关键字', 'volatile关键字']
+                    ]
                 },
                 {
-                    title:"linux基础",
-                    path:'/interview/linux基础',
-                    sidebarDepth:1
+                    title: "linux基础",
+                    path: '/interview/linux基础',
                 }
             ],
             '/tools/': [
