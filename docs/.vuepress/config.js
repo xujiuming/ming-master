@@ -57,21 +57,21 @@ module.exports = {
         sidebar: {
             '/interview/': [
                 {
-                    title: "java基础",
+                    title: "java",
                     path: '/interview/java',
                     children: [
-                        ['/interview/java/集合相关', '集合相关'],
-                        ['/interview/java/volatile关键字', 'volatile关键字'],
-                        ['/interview/java/JVM相关', 'JVM相关']
+                        ['/interview/java/集合', '集合'],
+                        ['/interview/java/volatile', 'volatile'],
+                        ['/interview/java/jvm', 'jvm']
                     ]
                 },
                 {
-                    title: "linux基础",
-                    path: '/interview/linux基础',
+                    title: "linux",
+                    path: '/interview/linux',
                 },
                 {
-                    title: "redis基础",
-                    path: '/interview/redis基础',
+                    title: "redis",
+                    path: '/interview/redis',
                 },
                 {
                     title: "http协议",
