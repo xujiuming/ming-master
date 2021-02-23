@@ -61,12 +61,21 @@ module.exports = {
                     path: '/interview/java',
                     children: [
                         ['/interview/java/集合相关', '集合相关'],
-                        ['/interview/java/volatile关键字', 'volatile关键字']
+                        ['/interview/java/volatile关键字', 'volatile关键字'],
+                        ['/interview/java/JVM相关', 'JVM相关']
                     ]
                 },
                 {
                     title: "linux基础",
                     path: '/interview/linux基础',
+                },
+                {
+                    title: "redis基础",
+                    path: '/interview/redis基础',
+                },
+                {
+                    title: "http协议",
+                    path: '/interview/http协议',
                 }
             ],
             '/tools/': [
