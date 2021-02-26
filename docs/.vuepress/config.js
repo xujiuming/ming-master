@@ -76,6 +76,10 @@ module.exports = {
                 {
                     title: "http协议",
                     path: '/interview/http协议',
+                },
+                {
+                    title: "算法",
+                    path: '/interview/算法',
                 }
             ],
             '/tools/': [
