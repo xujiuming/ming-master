@@ -70,6 +70,14 @@ module.exports = {
                     path: '/interview/linux',
                 },
                 {
+                    title: "k8s",
+                    path: '/interview/k8s',
+                },
+                {
+                    title: "postgres",
+                    path: '/interview/postgres',
+                },
+                {
                     title: "redis",
                     path: '/interview/redis',
                 },
