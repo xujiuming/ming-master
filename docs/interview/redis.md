@@ -128,9 +128,27 @@ redis备份方案选择:
     
 用redis做的话   redis4.x之后 可以直接安装 布隆过滤器插件   
 直接 bf.add bf.madd bf.exists bf.mexists 等指令直接操作     
-    
 
+## redis集群方案
+
+* codis
+>https://baike.baidu.com/item/CODIS/18160688?fr=aladdi
+
+    国产redis 集群平台  需要借助zk 
+    codis 代理管理redis集群  客户端只需要访问codis服务即可 类似mycat 
+
+* 哨兵模式  
+>
     
+    搭建redis主从 然后配合redis哨兵 做简单的高可用 
+
+  
+* cluster模式
+>
+
+    按照数据槽 拆分到不同节点 
+    一般是3+3模式  例如 分成不同的槽 分发到三个主节点  然后同步到对应的子节点  
+
 
 
 
