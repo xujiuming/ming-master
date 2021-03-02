@@ -35,3 +35,16 @@
 * 分布式事务协调  
     seata   
   
+* 调度中心
+    quartz(需要二次开发适配) 
+    xxl-job  
+    elastic job  
+    spring schedule 
+    k8s schedule + spring cloud tasks  
+      
+    
+* 网关
+    kong
+    zuul(基本废弃)
+    spring gateway(需要二次开发适配) 
+    k8s ingress
