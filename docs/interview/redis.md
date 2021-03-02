@@ -130,25 +130,37 @@ redis备份方案选择:
 直接 bf.add bf.madd bf.exists bf.mexists 等指令直接操作     
 
 ## redis集群方案
+                                        
+* codis                                   
+>https://baike.baidu.com/item/CODIS/18160688?fr=aladdi         
 
-* codis
->https://baike.baidu.com/item/CODIS/18160688?fr=aladdi
-
-    国产redis 集群平台  需要借助zk 
-    codis 代理管理redis集群  客户端只需要访问codis服务即可 类似mycat 
-
-* 哨兵模式  
->
+国产redis 集群平台  需要借助zk 
+codis 代理管理redis集群  客户端只需要访问codis服务即可 类似mycat 
+                                   
+* 哨兵模式                             
+> https://www.jianshu.com/p/06ab9daf921d        
     
-    搭建redis主从 然后配合redis哨兵 做简单的高可用 
+搭建redis主从 然后配合redis哨兵 做简单的高可用 
+但是会引入新的问题  哨兵高可用。。。 
 
   
-* cluster模式
->
+* cluster模式       
+> https://redis.io/topics/cluster-tutorial            
+> https://www.cnblogs.com/williamjie/p/11132211.html         
 
-    按照数据槽 拆分到不同节点 
-    一般是3+3模式  例如 分成不同的槽 分发到三个主节点  然后同步到对应的子节点  
 
+按照数据槽 把16384hash槽位拆分到不同节点             
+一般是3+3模式  例如 分成不同的槽 分发到三个主节点  然后同步到对应的子节点       
+
+    1. Redis Cluster数据分区规则采用虚拟槽方式(16384个槽)，每个节点负责一部分槽和相关数据，实现数据和请求的负载均衡   
+    2. 搭建Redis Cluster划分四个步骤：准备节点，meet操作，分配槽，复制数据。                                       
+    3. Redis官方推荐使用redis-trib.rb工具快速搭建Redis Cluster
+    4. 集群伸缩通过在节点之间移动槽和相关数据实现                                                                   
+    扩容时根据槽迁移计划把槽从源节点迁移到新节点                                                                      
+    收缩时如果下线的节点有负责的槽需要迁移到其他节点，再通过cluster forget命令让集群内所有节点忘记被下线节点                    
+    5. 使用smart客户端操作集群过到通信效率最大化，客户端内部负责计算维护键，槽以及节点的映射，用于快速定位到目标节点                 
+    6. 集群自动故障转移过程分为故障发现和节点恢复。节点下线分为主观下线和客观下线，当超过半数节点认为故障节点为主观下线时，标记这个节点为客观下线状态。从节点负责对客观下线的主节点触发故障恢复流程，保证集群的可用性
+    7. 开发运维常见问题包括：超大规模集群带席消耗，pub/sub广播问题，集群倾斜问题，单机和集群对比等                                   
 
 
 
