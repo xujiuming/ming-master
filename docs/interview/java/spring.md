@@ -1,3 +1,18 @@
+## spring boot 特性
+* 提供默认配置
+* 提供内嵌服务器
+
+## spring boot 常用的starter 
+* web
+* webflux
+* jpa
+* mybatis (非官方)
+* mybatis plus(非官方) 
+* security
+* devtools
+* test 
+
+
 ## spring cloud模块和对应的组件选择 
 * 注册中心  
     zk 、eureka、etcd、nacos  

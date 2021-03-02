@@ -61,7 +61,8 @@ module.exports = {
                     path: '/interview/java',
                     children: [
                         ['/interview/java/集合', '集合'],
-                        ['/interview/java/volatile', 'volatile'],
+                        ['/interview/java/并发处理', '并发处理'],
+                        ['/interview/java/spring', 'spring'],
                         ['/interview/java/jvm', 'jvm']
                     ]
                 },
