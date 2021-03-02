@@ -83,6 +83,10 @@ module.exports = {
                     path: '/interview/redis',
                 },
                 {
+                    title: "mq",
+                    path: '/interview/mq',
+                },
+                {
                     title: "http协议",
                     path: '/interview/http协议',
                 },
