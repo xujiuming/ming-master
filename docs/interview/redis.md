@@ -164,3 +164,8 @@ codis 代理管理redis集群  客户端只需要访问codis服务即可 类似m
 
 
 
+##  redis string 底层结构
+##  redis list 底层结构
+##  redis hash 底层结构  
+##  redis set 底层结构  
+##  redis zset 底层结构  
