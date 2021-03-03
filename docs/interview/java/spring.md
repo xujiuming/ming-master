@@ -1,4 +1,44 @@
 ## spring 事务隔离级别和传播方式 
+> 参考文档:https://www.cnblogs.com/wj0816/p/8474743.html
+> TransactionDefinition中的也有相关描述   
+* 事务隔离级别
+    1. 读未提交 READ UNCOMMITTED
+    2. 读已提交 READ COMMITTED
+    3. 重复读 REPEATABLE READ
+    4. 串行  SERIALIZABLE
+    5. defalut 默认使用数据库配置的隔离级别  
+* 对读取数据影响的方式
+    1. 脏读:一个事务读取了另一个未提交事务写入的数据
+    2. 不可重复度: 一个事务重新读取之前读取过的数据  发现已经改变
+    3. 幻读:一个事务开启后 需要根据根据已存在的字段去更新 回执行查询返回符合条件的数据 这个时候因为其他事务提交发生了改变 会导致当前事务无法进行 导致逻辑失败
+
+
+* 隔离级别
+
+|隔离级别|脏读|不可重复读|幻读|
+|------|---|--------|---|
+|读未提交|√|√|√|
+|读已提交|×|√|√|
+|重复读|×|×|√|
+|串行|×|×|×|
+
+* 传播方式 
+> TransactionDefinition中的内容  
+
+* PROPAGATION_REQUIRED
+  如果当前有事务 则加入事务  没有事务创建新事务      默认就是这种传播方式   
+* PROPAGATION_SUPPORTS
+  如果有事务 加入当前事务  如果没有就不执行事务    
+* PROPAGATION_MANDATORY
+  如果有事务 加入当前事务  没有就抛出异常  
+* PROPAGATION_REQUIRES_NEW
+  创建一个新事务 如果存在事务 那么挂起当前事务 使用新事务  
+* PROPAGATION_NOT_SUPPORTED
+  不支持当前事务 始终不执行事务  
+* PROPAGATION_NEVER
+  不支持当前事务 如果存在抛出异常 
+* PROPAGATION_NESTED
+  如果当前存在事务 那么嵌套在事务中执行
 
 
 
