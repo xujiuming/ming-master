@@ -45,8 +45,21 @@
     是在搭建普通集群之后 开启镜像模式  来达到每个物理队列数据都相同    
   
 
+## rabbit 消息持久化   
+>参考文档:   
+>https://www.cnblogs.com/bigberg/p/8195622.html   
+>https://honeypps.com/mq/rabbitmq-analysis-of-message-durable/     
 
-## rabbit 延时队列 
+rabbit 消息持久化 应该要分为三种类型  queue持久化  message持久化  exchange持久化       
+queue持久化:  设置 durable=true           消费端发送端都要设置     
+message持久化:  deliveryMode=2    (1:不持久化  2:持久化)      
+exchange持久化:  channel.exchangeDeclare(exchangeName, “direct/topic/header/fanout”, true)      
+
+消息刷盘时机:    
+创建一个buffer 大小为nMB  数据在写入文件的时候先写入buffer 如果buffer满了 立即写入到文件(不一定刷盘)     
+同时 每隔25ms 不管buffer满不满 度把buffer和未刷新到磁盘的数据 强制刷新到磁盘      
+
+## rabbit 延时队列  
 >参考文档:    
 >https://www.cnblogs.com/xiaoxing/p/9250823.html      
 >https://github.com/rabbitmq/rabbitmq-delayed-message-exchange        
