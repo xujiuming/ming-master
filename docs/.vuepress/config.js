@@ -91,6 +91,10 @@ module.exports = {
                     path: '/interview/http协议',
                 },
                 {
+                    title: "tcp协议",
+                    path: '/interview/tcp协议',
+                },
+                {
                     title: "算法",
                     path: '/interview/算法',
                 }
