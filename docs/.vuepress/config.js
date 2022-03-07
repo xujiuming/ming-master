@@ -88,7 +88,7 @@ module.exports = {
                 },
                 {
                     title: "http协议",
-                    path: '/interview/http协议',
+                    path: '/interview/HTTP协议',
                 },
                 {
                     title: "tcp协议",
