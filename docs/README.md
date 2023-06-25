@@ -3,8 +3,9 @@ home: true
 lang: zh-Hans
 heroText: ming
 heroImage: /img/logo.jpeg
-footer: 鄂ICP备17015344号 | Copyright © 2019 xujiuming
+footer: <a href='https://beian.miit.gov.cn'>鄂ICP备17015344号-1</a> | Copyright © 2019 xujiuming
 ---
+
 
 
 ## 常用链接
