@@ -26,7 +26,6 @@ jobs:
       # 构建
       - name: 构建vuepress静态文件
         run: |
-#          export NODE_OPTIONS=--openssl-legacy-provider
           npm install
           npm run docs:build
       # 使用oss util 复制dist目录到oss
