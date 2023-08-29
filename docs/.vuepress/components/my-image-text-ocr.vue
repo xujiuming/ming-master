@@ -54,7 +54,7 @@
                         that.valueUrl = this.result;
                     };
                     const formData = new FormData();  // 创建一个formdata对象
-                    formData.append('ocrFile', el.target.files[0]);
+                    formData.append('file', el.target.files[0]);
                     let config = {
                         headers: {
                             'Content-Type': 'multipart/form-data',
