@@ -64,7 +64,7 @@
                         .then((response) => {
                             this.imageTextInfoArray = response.data
                             for (let item of this.imageTextInfoArray) {
-                                this.imageText += '\n' + item.words;
+                                this.imageText += '\n' + item;
                             }
                         }).catch(e => {
                         this.imageText = e
