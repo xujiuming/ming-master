@@ -6,10 +6,10 @@
     <div class="container" style="width: 100%;height: 100%">
         <div class="row">
             <div class="col-5 form-group">
-                <input class="form-control" type="file" @change="uploadFile($event)" name="ocrFile"/>
+                <input class="form-control" type="file" @change="uploadFile($event)" name="file" />
                 <div v-if="valueUrl">
                     图片预览:
-                    <img :src=valueUrl>
+                    <img :src=valueUrl alt="">
                 </div>
             </div>
             <div class="col-1">
