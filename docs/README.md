@@ -8,7 +8,9 @@ heroImage: /img/logo.jpeg
 
 
 ## 常用链接
-#### 个人链接
+[文心一言](https://yiyan.baidu.com/)
+
+### 个人链接
 [后台](https://show.xujiuming.com)
 [个人Github](https://www.github.com/xujiuming) 
 [个人博客](https://blog.xujiuming.com)  
