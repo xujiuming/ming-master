@@ -1,4 +1,4 @@
-:::tips
+::: tip
 记录来源: https://www.pdai.tech/md/interview/x-interview.html#_8-2-mysql
 :::
 
