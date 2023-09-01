@@ -79,6 +79,10 @@ module.exports = {
                     path: '/interview/postgres',
                 },
                 {
+                    title: "mysql",
+                    path: '/interview/mysql',
+                },
+                {
                     title: "redis",
                     path: '/interview/redis',
                 },
